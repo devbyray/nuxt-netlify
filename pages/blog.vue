@@ -5,12 +5,7 @@
       <sidebar />
     </header>
     <div class="mfd__blog-list">
-      <div v-for="post in posts" class="mfd__blog-item">
-        <nuxt-link class="mfd__blog-content" :to="'blog/' + post.id">
-          <span>{{moment(post.date).fromNow()}}</span>
-          <strong v-html="post.title.rendered"></strong>
-        </nuxt-link>
-      </div>
+      <h1>BLOGGG</h1>
     </div>
   </section>
 </template>

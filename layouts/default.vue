@@ -5,11 +5,10 @@
 </template>
 
 <style>
+@import url('https://fonts.googleapis.com/css?family=PT+Serif');
 html {
-  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 1.2rem;
-  /* line-height: 1.6rem; */
-  word-spacing: 1px;
+  font-family: 'PT Serif', sans-serif;
+  font-size: 1.4rem;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;

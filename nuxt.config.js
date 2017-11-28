@@ -18,6 +18,23 @@ module.exports = {
   */
   loading: { color: '#3B8070' },
   /*
+  ** Routing
+  */
+  router: {
+    routes: [
+      {
+        name: 'index',
+        path: '/',
+        component: 'pages/index.vue'
+      },
+      {
+        name: 'blog',
+        path: '/:id',
+        component: 'pages/blog.vue'
+      }
+    ]
+  },
+  /*
   ** Build configuration
   */
   build: {
