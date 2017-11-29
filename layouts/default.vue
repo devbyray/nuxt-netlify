@@ -8,7 +8,7 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Serif');
 html {
   font-family: 'PT Serif', sans-serif;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
@@ -52,4 +52,37 @@ body {
   color: #fff;
   background-color: #35495e;
 }
+.title {
+  display: block;
+  font-size: 4rem;
+}
+
+.subtitle {
+  font-weight: 300;
+  font-size: 42px;
+  color: #526488;
+  word-spacing: 5px;
+  padding-bottom: 15px;
+}
+
+.links {
+  padding-top: 15px;
+}
+
+.embed-youtube {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+  margin-left: -3rem;
+  margin-right: -3rem;
+}
+.embed-youtube iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
 </style>

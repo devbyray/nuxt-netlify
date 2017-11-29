@@ -2,7 +2,7 @@
   <div class="mfd__sidebar">
       <nav>
           <ul>
-              <li><a href="#">Home</a></li>
+              <li><a href="/">Home</a></li>
           </ul>
       </nav>
   </div>
