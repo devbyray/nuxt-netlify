@@ -4,8 +4,10 @@
   </div>
 </template>
 
+
 <style>
 @import url('https://fonts.googleapis.com/css?family=PT+Serif');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css');
 html {
   font-family: 'PT Serif', sans-serif;
   font-size: 1.6rem;
@@ -54,7 +56,7 @@ body {
 }
 .title {
   display: block;
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 .subtitle {
@@ -68,14 +70,20 @@ body {
 .links {
   padding-top: 15px;
 }
+@media screen
+  and (min-width: 900px)
+  and (-webkit-min-device-pixel-ratio: 1) {
+  .embed-youtube {
+    margin-left: -3rem;
+    margin-right: -3rem;
+  }
 
+}
 .embed-youtube {
 	position: relative;
 	padding-bottom: 56.25%; /* 16:9 */
 	padding-top: 25px;
 	height: 0;
-  margin-left: -3rem;
-  margin-right: -3rem;
 }
 .embed-youtube iframe {
 	position: absolute;
@@ -84,5 +92,14 @@ body {
 	width: 100%;
 	height: 100%;
 }
-
+.container {
+  /* min-height: 100vh; */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  overflow: hidden;
+}
 </style>

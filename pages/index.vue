@@ -76,12 +76,4 @@ export default {
   color: #333333;
   font-size: 1.5rem;
 }
-.container {
-  /* min-height: 100vh; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  flex-direction: column;
-}
 </style>
