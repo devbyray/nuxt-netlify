@@ -10,12 +10,31 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css');
 html {
   font-family: 'PT Serif', sans-serif;
-  font-size: 1.6rem;
+  font-size: 1.1rem;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+}
+
+@media screen
+  and (min-width: 600px) {
+    html {
+      font-size: 1.2rem;
+    }
+}
+@media screen
+  and (min-width: 900px) {
+    html {
+      font-size: 1.4rem;
+    }
+}
+@media screen
+  and (min-width: 1600px) {
+    html {
+      font-size: 1.6rem;
+    }
 }
 body {
   color: #f9f9f9;

@@ -43,9 +43,16 @@ export default {
 
 <style>
 @media screen
+  and (min-width: 600px) {
+  .mfd__post-content {
+    max-width: 500px;
+  }
+}
+@media screen
   and (min-width: 900px) {
   .mfd__post-content {
     padding: 0 3rem;
+    max-width: 700px;
   }
   .mfd__post-title-wrapper {
     padding: 0 5rem;
@@ -55,9 +62,10 @@ export default {
   }
 }
 @media screen
-  and (min-width: 1200px) {
+  and (min-width: 1600px) {
   .mfd__post-content {
     padding: 0 3rem;
+    max-width: 800px;
   }
   .mfd__post-title-wrapper {
     padding: 0 5rem;
@@ -67,7 +75,6 @@ export default {
   }
 }
 .mfd__post-content {
-  max-width: 700px;
   width: 100%;
   padding: 0 2rem;
   text-align: left;
