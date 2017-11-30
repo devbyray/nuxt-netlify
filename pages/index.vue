@@ -5,7 +5,7 @@
       <sidebar />
     </header>
     <div class="mfd__blog-list">
-      <div v-for="post in posts" class="mfd__blog-item" :key="post.id">
+      <div v-for="post in posts" class="mfd__blog-item" :key="post.id" :style="{'background-image': 'url(' + post.better_featured_image.media_details.sizes.large.source_url +' )'}">
         <nuxt-link class="mfd__blog-content" :to="'blog/' + post.id">
           <span>{{moment(post.date).fromNow()}}</span>
           <strong v-html="post.title.rendered"></strong>
@@ -51,7 +51,8 @@ export default {
 }
 .mfd__blog-item {
   flex: 0 1 100%;
-  padding: 1px;
+  border: 1px solid #333;
+  background-position: top right;
 }
 @media screen
   and (min-width: 900px) {
@@ -62,24 +63,27 @@ export default {
 }
 .mfd__blog-content {
   display: flex;
-  width: 100%; height: 100%;;
+  width: 100%; height: 100%;
   text-align: left;
   align-items: flex-start;
-  align-content: flex-start;
-  background: #ccc;
-  color: #333333;
+  justify-content: flex-end;
+  background: linear-gradient(to top,rgba(0,0,0,0.8), rgba(0,0,0,0.4) 100%);
   padding: 1.5rem;
   flex-direction: column;
   flex-wrap: nowrap;
+  transition: .5s ease-in-out;
+}
+.mfd__blog-item:hover .mfd__blog-content {
+  background-color: rgba(0, 0, 0, 0.9);
 }
 .mfd__blog-content strong {
   margin-bottom: .8rem
 }
 .mfd__blog-content span {
-  font-size: .9rem;
+  font-size: .7rem;
 }
 .mfd__blog-item a {
-  color: #333333;
-  font-size: 1.5rem;
+  color: #ffffff;
+  font-size: 1.3rem;
 }
 </style>

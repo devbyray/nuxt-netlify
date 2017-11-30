@@ -4,7 +4,7 @@
       <logo/>
       <sidebar />
     </header>
-    <div class="mfd__post-title">
+    <div class="mfd__post-title" :style="{'background-image': 'url(' + post.better_featured_image.media_details.sizes.large.source_url +' )'}">
       <div class="mfd__post-title-wrapper">
         <h1 class="title" v-html="post.title.rendered"></h1>
       </div>
@@ -76,11 +76,16 @@ export default {
   text-align: left;
   color: #333333;
 }
+.mfd__post-title-wrapper {
+  background: linear-gradient(to top,rgba(0,0,0,0.8), rgba(0,0,0,0.4) 100%);
+  width: 100%; height: 100%;
+  padding: 3rem 0;
+}
 .mfd__post-title {
-  background: #333;
   color: #fff;
-  padding: 2rem 0;
   margin-bottom: 2rem;
+  background-size: cover;
+  background-position: center;
 }
 .mfd__post-title .title {
     font-size: 2rem;
