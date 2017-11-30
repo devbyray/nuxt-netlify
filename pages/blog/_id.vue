@@ -46,8 +46,7 @@ export default {
 
 <style>
 @media screen
-  and (min-width: 900px)
-  and (-webkit-min-device-pixel-ratio: 1) {
+  and (min-width: 900px) {
   .mfd__post-content {
     padding: 0 3rem;
   }
@@ -57,10 +56,22 @@ export default {
   .mfd__post-title .title {
     font-size: 4rem;
   }
-
+}
+@media screen
+  and (min-width: 1200px) {
+  .mfd__post-content {
+    padding: 0 3rem;
+  }
+  .mfd__post-title-wrapper {
+    padding: 0 5rem;
+  }
+  .mfd__post-title .title {
+    font-size: 4rem;
+  }
 }
 .mfd__post-content {
   max-width: 700px;
+  width: 100%;
   padding: 0 2rem;
   text-align: left;
   color: #333333;
@@ -70,6 +81,9 @@ export default {
   color: #fff;
   padding: 2rem 0;
   margin-bottom: 2rem;
+}
+.mfd__post-title .title {
+    font-size: 2rem;
 }
 
 .mfd__post-content p,
@@ -87,13 +101,6 @@ export default {
 .mfd__post-content pre {
   background: #333;
   color: #fff;
-}
-.container {
-  /* min-height: 100vh; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
 
 </style>

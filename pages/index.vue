@@ -50,9 +50,15 @@ export default {
   padding-top: 1rem;
 }
 .mfd__blog-item {
-  flex: 0 1 50%;
-  height: 300px;
+  flex: 0 1 100%;
   padding: 1px;
+}
+@media screen
+  and (min-width: 900px) {
+    .mfd__blog-item {
+      flex-basis: 50%;
+      height: 300px;
+    }
 }
 .mfd__blog-content {
   display: flex;
