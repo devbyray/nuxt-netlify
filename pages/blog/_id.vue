@@ -75,13 +75,18 @@ export default {
   padding: 0 2rem;
   text-align: left;
   color: #333333;
+  line-height: 1.6;
 }
 .mfd__post-title-wrapper {
-  background: linear-gradient(to top,rgba(0,0,0,0.8), rgba(0,0,0,0.4) 100%);
+  background: linear-gradient(to top,rgba(0,0,0,0.8), rgba(0,0,0,0.6) 100%);
   width: 100%; height: 100%;
   padding: 3rem 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 .mfd__post-title {
+  width: 100%;
   color: #fff;
   margin-bottom: 2rem;
   background-size: cover;
@@ -89,12 +94,14 @@ export default {
 }
 .mfd__post-title .title {
     font-size: 2rem;
+    max-width: 700px;
+    text-align: center
 }
 
 .mfd__post-content p,
 .mfd__post-content ol,
 .mfd__post-content ul {
-  margin-bottom: 2rem;
+  margin-bottom: 1.2rem;
 }
 .mfd__post-content code {
   background: #ccc;
@@ -102,10 +109,12 @@ export default {
   display: inline-block;
    white-space: pre-wrap;
     word-wrap: break-word;
+    font-size: .8rem;
 }
 .mfd__post-content pre {
   background: #333;
   color: #fff;
+    font-size: .8rem;
 }
 
 </style>
