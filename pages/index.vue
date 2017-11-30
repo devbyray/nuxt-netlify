@@ -46,7 +46,8 @@ export default {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
   padding-top: 1rem;
 }
 .mfd__blog-item {
@@ -54,11 +55,18 @@ export default {
   border: 1px solid #333;
   background-position: top right;
 }
+
 @media screen
   and (min-width: 900px) {
     .mfd__blog-item {
       flex-basis: 50%;
-      height: 300px;
+      height: 400px;
+    }
+}
+@media screen
+  and (min-width: 1600px) {
+    .mfd__blog-item {
+      flex-basis: calc(100%/3);
     }
 }
 .mfd__blog-content {

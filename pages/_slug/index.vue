@@ -26,6 +26,7 @@ export default {
     let { data } = await axios.get(
       `https://blog.mrfrontend.org/wp-json/wp/v2/posts?slug=${params.slug}`
     )
+
     return { post: data[0] }
   },
   data () {
