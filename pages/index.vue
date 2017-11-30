@@ -6,7 +6,7 @@
     </header>
     <div class="mfd__blog-list">
       <div v-for="post in posts" class="mfd__blog-item" :key="post.id" :style="{'background-image': 'url(' + post.better_featured_image.media_details.sizes.large.source_url +' )'}">
-        <nuxt-link class="mfd__blog-content" :to="'blog/' + post.id">
+        <nuxt-link class="mfd__blog-content" :to="{ name: 'slug', params: { slug: post.slug }}">
           <span>{{moment(post.date).fromNow()}}</span>
           <strong v-html="post.title.rendered"></strong>
         </nuxt-link>
