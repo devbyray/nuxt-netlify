@@ -4,7 +4,6 @@
   </div>
 </template>
 
-
 <style>
 @import url('https://fonts.googleapis.com/css?family=PT+Serif');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css');
