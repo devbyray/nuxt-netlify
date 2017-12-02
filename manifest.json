@@ -1,0 +1,110 @@
+{
+    "dir": "ltr",
+    "lang": "en",
+    "name": "Mr Frontend Blog - BETA",
+    "scope": "/",
+    "display": "browser",
+    "start_url": "https://beta.mrfrontend.org/",
+    "short_name": "Mr Frontend",
+    "theme_color": "#ee2b71",
+    "description": "Beta Blog for Mr Frontend",
+    "orientation": "any",
+    "background_color": "#ee2b71",
+    "related_applications": [],
+    "prefer_related_applications": false,
+    "icons": [
+        {
+            "src": "/images/favicon.ico",
+            "sizes": "16x16"
+        },
+        {
+            "src": "/images/favicon.ico",
+            "sizes": "16x16"
+        },
+        {
+            "src": "/images/243feabe-3df2-111b-7821-596f4d9bb8e9.webPlatform.png",
+            "sizes": "48x48",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/79711ed4-c562-2f0a-5942-f87c0484b12c.webPlatform.png",
+            "sizes": "1240x600",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/d7573bec-439f-a266-ddc5-9ce1f980b0b1.webPlatform.png",
+            "sizes": "300x300",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/3c390358-0cc6-b2e5-18ae-8b0e9284a5c9.webPlatform.png",
+            "sizes": "88x88",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/1df75a0a-338c-37df-2dce-1b3e20bc6bc9.webPlatform.png",
+            "sizes": "24x24",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/9776c8b1-c35c-b4ea-c291-b0bd7aa44a1c.webPlatform.png",
+            "sizes": "50x50",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/9b3dcec3-c756-5d6f-e4f1-abb11a59be7a.webPlatform.png",
+            "sizes": "620x300",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/54e0c9b5-bd2f-61de-9a3b-221dae9eedff.webPlatform.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/30f07967-4ce4-fd7e-b7eb-7ee818a49dae.webPlatform.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/266e81c8-4b02-53aa-caeb-23c719e06a97.webPlatform.png",
+            "sizes": "96x96",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/8e4de50c-75b2-de22-99d1-033bdd773016.webPlatform.png",
+            "sizes": "72x72",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/7beef6d6-204a-f986-6f1b-bd95c0559552.webPlatform.png",
+            "sizes": "36x36",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/37998255-873c-5430-5717-0c344fd7c885.webPlatform.png",
+            "sizes": "1024x1024",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/774d280e-6c20-2424-9479-f71d9d81431b.webPlatform.png",
+            "sizes": "180x180",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/66861541-10c0-3783-3d93-4f7db9895a81.webPlatform.png",
+            "sizes": "152x152",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/01c423f0-5ecb-3fca-7206-f25bb3b764be.webPlatform.png",
+            "sizes": "120x120",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/0222843d-cd52-6076-9401-b4bf2b232658.webPlatform.png",
+            "sizes": "76x76",
+            "type": "image/png"
+        }
+    ]
+}

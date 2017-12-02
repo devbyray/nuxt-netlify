@@ -1,8 +1,29 @@
 <template>
-  <div>
-    <nuxt/>
-  </div>
+  <section class="container">
+    <header class="mfd__header">
+      <logo/>
+      <navigation />
+    </header>
+    <Sidebar />
+    <div class="mfd__content">
+      <nuxt/>
+    </div>
+  </section>
 </template>
+
+<script>
+import Logo from '~/components/Logo.vue'
+import Navigation from '~/components/Navigation.vue'
+import Sidebar from '~/components/Sidebar.vue'
+export default {
+  components: {
+    Logo,
+    Navigation,
+    Sidebar
+  }
+}
+</script>
+
 
 <style>
 @import url('https://fonts.googleapis.com/css?family=PT+Serif');
@@ -64,29 +85,69 @@ a {
 	height: 100%;
 }
 .container {
-  /* min-height: 100vh; */
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  padding: 1rem;
+    overflow: hidden;
+    padding: 1rem;
+    max-width: 1440px;
+    margin: 0 auto;
 }
-.mfd__header {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  margin-bottom: 2rem;
-  align-items: center;
+@supports not (display: grid) {
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mfd__header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    align-items: center;
+  }
+  .mfd__sidebar {
+    max-width: 200px;
+  }
+  .mfd__blog-list {
+    /* min-height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 724px;
+    margin: 0 auto
+  }
+
 }
-.mfd__blog-list {
-  /* min-height: 100vh; */
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  max-width: 724px;
-  margin: 0 auto
+@supports (display: grid) {
+
+  .container {
+    min-height: 100vh;
+    display: grid;
+    grid-gap: 2em;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-areas:
+     "header header header"
+     "content content sidebar";
+  }
+
+  .mfd__header  {
+    grid-area: header;
+    grid-row: 1;
+    grid-column: 1/13;
+  }
+  .mfd__content  {
+    grid-area: content;
+    grid-row: 3;
+    grid-column: 2/9;
+  }
+  .mfd__sidebar {
+    grid-area: sidebar;
+    grid-row: 3;
+    grid-column: 9/12
+  }
+
 }
+
 img {
   max-width: 100%;
 }

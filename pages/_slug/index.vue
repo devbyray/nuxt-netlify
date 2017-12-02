@@ -1,24 +1,20 @@
 <template>
-  <section class="container">
-    <header class="mfd__header">
-      <logo/>
-      <sidebar />
-    </header>
-    <div class="mfd__blog-list">
-      <div class="mfd__post-title">
-        <h1 class="title" v-html="post.title.rendered"></h1>
-      </div>
-      <div class="mfd__post-content">
-        <div class="content" v-html="post.content.rendered"></div>
-      </div>
+  <article class="mfd__post">
+    <div class="mfd__post-title">
+      <h1 class="title" v-html="post.title.rendered"></h1>
     </div>
-  </section>
+    <div class="mfd__post-date">
+      <strong>Published: </strong> <em :title="post.date">{{moment(post.date).fromNow()}}</em>
+    </div>
+    <div class="mfd__post-content">
+      <div class="content" v-html="post.content.rendered"></div>
+    </div>
+  </article>
 </template>
+
 <script>
 import axios from 'axios'
 import moment from 'moment'
-import Logo from '~/components/Logo.vue'
-import Sidebar from '~/components/Sidebar.vue'
 
 export default {
   async asyncData ({ params }) {
@@ -33,15 +29,17 @@ export default {
     return {
       moment: moment
     }
-  },
-  components: {
-    Logo,
-    Sidebar
   }
 }
 </script>
 
 <style>
+@supports (display: grid) {
+  .mfd__post-title {
+    grid-row: 2;
+    grid-column: 1/13
+  }
+}
 @media screen
   and (min-width: 900px) {
   .mfd__post-title .title {
@@ -55,13 +53,10 @@ export default {
   }
 }
 .mfd__post-content {
-  width: 100%;
-  text-align: left;
-  color: #333333;
   line-height: 1.6;
 }
 .mfd__post-title .title {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 .mfd__post-content p,

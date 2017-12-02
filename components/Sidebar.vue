@@ -1,43 +1,37 @@
 <template>
-  <div class="mfd__navigation">
-      <nav>
-          <ul class="mfd__navigation-ul">
-              <li><a href="/">Home</a></li>
-              <li><a href="/">About</a></li>
-              <li><a href="/">Content</a></li>
+  <div class="mfd__sidebar">
+      <aside>
+          <ul class="mfd__sidebar-ul">
+            <li><a href="/">Home</a></li>
+            <li><a href="/">About</a></li>
+            <li><a href="/">Content</a></li>
           </ul>
-      </nav>
+      </aside>
   </div>
 </template>
 
 <style>
-.mfd__logo {
-  color: #333;
-}
-.mfd__logo h1 {
-  font-size: 3rem;
-}
-.mfd__navigation {
-  padding-top: 2rem;
-}
-.mfd__navigation-ul {
+.mfd__sidebar-ul {
   margin: 0;
   padding: 0;
   list-style: none;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
-.mfd__navigation a {
+.mfd__sidebar-ul li {
+  display: block;
+  margin-bottom: .2rem;
+}
+.mfd__sidebar-ul a {
   font-size: .8rem;
   text-transform: uppercase;
-  display: inline-block;
+  display: block;
   background: #efefef;
   padding: .5rem;
   text-decoration: none;
   transition: .3s ease-in-out;
-  margin: 0 .2rem;
 }
-.mfd__navigation a:hover {
+.mfd__sidebar-ul a:hover {
   background: #333;
   color: #fff;
 }
