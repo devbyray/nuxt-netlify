@@ -1,5 +1,6 @@
 <template>
   <article class="mfd__post">
+    <sidebar />
     <div class="mfd__post-title">
       <h1 class="title" v-html="post.title.rendered"></h1>
     </div>
@@ -15,8 +16,10 @@
 <script>
 import axios from 'axios'
 import moment from 'moment'
+import Sidebar from '~/components/Sidebar.vue'
 
 export default {
+  layout: 'post',
   async asyncData ({ params }) {
     // We can use async/await ES6 feature
     let { data } = await axios.get(
@@ -29,15 +32,37 @@ export default {
     return {
       moment: moment
     }
+  },
+  components: {
+    Sidebar
   }
+
 }
 </script>
 
 <style>
 @supports (display: grid) {
+  .mfd__post {
+    display: grid;
+    grid-gap: 2em;
+    grid-template-columns: repeat(12,1fr);
+
+  }
   .mfd__post-title {
+    grid-row: 1;
+    grid-column: 1/10
+  }
+  .mfd__post-date {
     grid-row: 2;
-    grid-column: 1/13
+    grid-column: 1/3
+  }
+  .mfd__post-content {
+    grid-row: 2;
+    grid-column: 3/10
+  }
+  .mfd__sidebar {
+    grid-row: 2;
+    grid-column: 10/13
   }
 }
 @media screen

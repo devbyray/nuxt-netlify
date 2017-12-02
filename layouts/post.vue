@@ -4,7 +4,6 @@
       <logo/>
       <navigation />
     </header>
-    <Sidebar />
     <div class="mfd__content">
       <nuxt/>
     </div>
@@ -14,12 +13,10 @@
 <script>
 import Logo from '~/components/Logo.vue'
 import Navigation from '~/components/Navigation.vue'
-import Sidebar from '~/components/Sidebar.vue'
 export default {
   components: {
     Logo,
-    Navigation,
-    Sidebar
+    Navigation
   }
 }
 </script>
@@ -125,9 +122,6 @@ a {
     display: grid;
     grid-gap: 2em;
     grid-template-columns: repeat(12,1fr);
-    /* grid-template-areas:
-     "header header header"
-     "content content sidebar"; */
   }
 
   .mfd__header  {
@@ -137,15 +131,9 @@ a {
   }
   .mfd__content  {
     grid-area: content;
-    grid-row: 3;
-    grid-column: 2/9;
+    grid-row: 2;
+    grid-column: 1/13;
   }
-  .mfd__sidebar {
-    grid-area: sidebar;
-    grid-row: 3;
-    grid-column: 9/12
-  }
-
 }
 
 img {
