@@ -5,10 +5,4 @@
 </template>
 
 <style>
-.mfd__logo {
-  color: #333;
-}
-.mfd__logo h1 {
-  font-size: 3rem;
-}
 </style>
