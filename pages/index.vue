@@ -11,8 +11,8 @@
               <h2 class="mfd-post__link-title" v-html="post.title.rendered"></h2>
             </nuxt-link>
           </div>
-          <p class="mfd-post__date"><em>{{moment(post.date).fromNow()}}</em></p>
-          <p class="mfd-post__excerpt" v-html="post.excerpt.rendered"></p>
+          <p class="mfd-post__date"><strong>Published: </strong> <em :title="post.date">{{moment(post.date).fromNow()}}</em></p>
+          <span class="mfd-post__excerpt" v-html="post.excerpt.rendered"></span>
           <p class="mfd-post__readmore">
             <nuxt-link class="mfd-post__readmore-link" :to="{ name: 'slug', params: { slug: post.slug }}">Read more ></nuxt-link>
           </p>
@@ -49,25 +49,14 @@ export default {
 
 <style>
 .mfd__blog-item {
-  padding-bottom: 2rem;
+  padding-bottom: 3rem;
 }
 .mfd-post__link-title {
   display: inline;
   line-height: 1.6;
 }
-.mfd__blog-link,
-.mfd-post__readmore-link {
-  display: inline;
-  text-decoration: none;
-  border-bottom: 2px solid #ee2b71;
-  padding: .4rem .2rem .2rem .2rem;
-  transition: .5s ease-in-out
-}
-.mfd__blog-link:hover ,
-.mfd-post__readmore-link:hover {
-  background-color: #ee2b71;
-  color: #ffffff;
-
+.mfd-post__excerpt {
+  display: block;
 }
 .mfd-post__readmore-link,
 .mfd__blog-link,

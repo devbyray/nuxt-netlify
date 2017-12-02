@@ -67,7 +67,7 @@ export default {
 .mfd__post-content p,
 .mfd__post-content ol,
 .mfd__post-content ul {
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.6rem;
 }
 .mfd__post-content code {
   display: inline;
