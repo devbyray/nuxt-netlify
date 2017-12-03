@@ -14,7 +14,11 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'Beta blog from Mr Frontend with NuxtJS' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {rel: 'stylesheet', href: '//fonts.googleapis.com/css?family=Abril+Fatface'},
+      {rel: 'stylesheet', href: '//fonts.googleapis.com/css?family=PT+Serif'},
+      {rel: 'stylesheet', href: '//cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css'},
+
     ]
   },
 

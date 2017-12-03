@@ -26,9 +26,6 @@ export default {
 
 
 <style>
-@import url('https://fonts.googleapis.com/css?family=PT+Serif');
-@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css');
 html {
   font-family: 'PT Serif', sans-serif;
   font-size: 1rem;
