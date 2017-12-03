@@ -7,10 +7,10 @@
           </nuxt-link>
         </div>
         <p class="mfd-post__date"><strong>Published: </strong> <em :title="post.date">{{moment(post.date).fromNow()}}</em></p>
-        <!-- <span class="mfd-post__excerpt" v-html="post.excerpt.rendered"></span>
+        <span class="mfd-post__excerpt" v-html="post.excerpt.rendered"></span>
         <p class="mfd-post__readmore">
           <nuxt-link class="mfd-post__readmore-link" :to="{ name: 'slug', params: { slug: post.slug }}">Read more ></nuxt-link>
-        </p> -->
+        </p>
     </div>
   </div>
 </template>
