@@ -21,6 +21,28 @@ module.exports = {
 
     ]
   },
+  generate: {
+    minify: {
+      collapseBooleanAttributes: false,
+      collapseWhitespace: false,
+      decodeEntities: false,
+      minifyCSS: false,
+      minifyJS: false,
+      processConditionalComments: false,
+      removeAttributeQuotes: false,
+      removeComments: false,
+      removeEmptyAttributes: false,
+      removeOptionalTags: false,
+      removeRedundantAttributes: false,
+      removeScriptTypeAttributes: false,
+      removeStyleLinkTypeAttributes: false,
+      removeTagWhitespace: false,
+      sortAttributes: false,
+      sortClassName: false,
+      trimCustomFragments: false,
+      useShortDoctype: false
+    }
+  },
 
   /*
   ** Customize the progress bar color
