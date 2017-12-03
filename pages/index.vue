@@ -3,7 +3,7 @@
     <div v-for="post in posts" class="mfd__blog-item" :key="post.id">
         <div class="mfd-post__link">
           <nuxt-link class="mfd__blog-link" :to="{ name: 'slug', params: { slug: post.slug }}">
-            <h2 class="mfd-post__link-title" v-html="post.title.rendered"></h2>
+            <strong class="mfd-post__link-title" v-html="post.title.rendered"></strong>
           </nuxt-link>
         </div>
         <p class="mfd-post__date"><strong>Published: </strong> <em :title="post.date">{{moment(post.date).fromNow()}}</em></p>
