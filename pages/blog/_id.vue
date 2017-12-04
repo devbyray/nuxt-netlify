@@ -75,7 +75,6 @@ export default {
   padding: 0 2rem;
   text-align: left;
   color: #333333;
-  line-height: 1.6;
 }
 .mfd__post-title-wrapper {
   background: linear-gradient(to top,rgba(0,0,0,0.8), rgba(0,0,0,0.6) 100%);

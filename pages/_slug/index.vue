@@ -1,8 +1,10 @@
 <template>
   <article class="mfd__post">
-    <sidebar />
     <div class="mfd__post-title">
       <h1 class="title" v-html="post.title.rendered"></h1>
+    </div>
+    <div class="mfd__post-image" v-if="post.better_featured_image !== undefined">
+      <img :src="post.better_featured_image.source_url" :alt="post.title.rendered">
     </div>
     <div class="mfd__post-date">
       <strong>Published: </strong> <em :title="post.date">{{moment(post.date).fromNow()}}</em>
@@ -45,24 +47,43 @@ export default {
   .mfd__post {
     display: grid;
     grid-gap: 2em;
+    grid-template-rows: 1fr;
     grid-template-columns: repeat(12,1fr);
-
   }
   .mfd__post-title {
     grid-row: 1;
-    grid-column: 1/10
+    grid-column: 2/12
+  }
+  .mfd__post-image {
+    grid-row: 2;
+    grid-column: 2/12
   }
   .mfd__post-date {
-    grid-row: 2;
-    grid-column: 1/3
+    grid-row: 3;
+    grid-column: 2/12
   }
   .mfd__post-content {
-    grid-row: 2;
-    grid-column: 3/10
+    grid-row: 4;
+    grid-column: 2/12
   }
-  .mfd__sidebar {
-    grid-row: 2;
-    grid-column: 10/13
+
+  @media screen
+    and (min-width: 900px) {
+      .mfd__post-title {
+        grid-column: 3/11;
+        text-align: justify;
+      }
+      .mfd__post-image {
+        grid-column: 2/12;
+      }
+      .mfd__post-date {
+        grid-column: 3/4
+      }
+      .mfd__post-content {
+        grid-row: 3;
+        grid-column: 5/11
+      }
+
   }
 }
 @media screen
@@ -76,9 +97,6 @@ export default {
   .mfd__post-title .title {
     font-size: 4rem;
   }
-}
-.mfd__post-content {
-  line-height: 1.6;
 }
 .mfd__post-title .title {
   font-size: 2rem;

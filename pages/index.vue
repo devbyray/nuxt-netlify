@@ -6,6 +6,9 @@
             <h2 class="mfd-post__link-title" v-html="post.title.rendered"></h2>
           </nuxt-link>
         </div>
+        <div class="mfd-post__image" v-if="post.better_featured_image.media_details !== undefined">
+          <img :src="post.better_featured_image.media_details.sizes.medium_large.source_url" :alt="post.title.rendered">
+        </div>
         <p class="mfd-post__date"><strong>Published: </strong> <em :title="post.date">{{moment(post.date).fromNow()}}</em></p>
         <span class="mfd-post__excerpt" v-html="post.excerpt.rendered"></span>
         <p class="mfd-post__readmore">
@@ -25,6 +28,8 @@ export default {
       `https://blog.mrfrontend.org/wp-json/wp/v2/posts/`
     )
 
+    console.log('data: ', data[0])
+
     return { posts: data }
   },
   data () {
@@ -43,7 +48,6 @@ export default {
 }
 .mfd-post__link-title {
   display: inline;
-  line-height: 1.6;
 }
 .mfd-post__excerpt {
   display: block;

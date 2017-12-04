@@ -18,6 +18,7 @@ module.exports = {
       {rel: 'stylesheet', href: '//fonts.googleapis.com/css?family=Abril+Fatface'},
       {rel: 'stylesheet', href: '//fonts.googleapis.com/css?family=PT+Serif'},
       {rel: 'stylesheet', href: '//cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css'},
+      {rel: 'stylesheet', href: '/css/app.css'},
 
     ]
   },

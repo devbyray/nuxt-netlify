@@ -23,67 +23,6 @@ export default {
 
 
 <style>
-html {
-  font-family: 'PT Serif', sans-serif;
-  font-size: 1rem;
-  line-height: 1.4;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-}
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Abril Fatface", Helvetica;
-}
-
-@media screen
-  and (min-width: 600px) {
-    html {
-      font-size: 1.1rem;
-    }
-}
-@media screen
-  and (min-width: 900px) {
-    html {
-      font-size: 1.2rem;
-    }
-}
-@media screen
-  and (min-width: 1600px) {
-    html {
-      font-size: 1.3rem;
-    }
-}
-body,
-a {
-  color: #333333;
-}
-
-*, *:before, *:after {
-  box-sizing: border-box;
-  margin: 0;
-}
-
-.embed-youtube {
-	position: relative;
-	padding-bottom: 56.25%; /* 16:9 */
-	padding-top: 25px;
-	height: 0;
-}
-.embed-youtube iframe {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
-.container {
-    overflow: hidden;
-    padding: 1rem;
-    max-width: 1440px;
-    margin: 0 auto;
-}
 @supports not (display: grid) {
   .container {
     width: 100%;
@@ -122,12 +61,10 @@ a {
   }
 
   .mfd__header  {
-    grid-area: header;
     grid-row: 1;
     grid-column: 1/13;
   }
   .mfd__content  {
-    grid-area: content;
     grid-row: 2;
     grid-column: 1/13;
   }
