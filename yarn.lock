@@ -5594,6 +5594,10 @@ vm-browserify@0.0.4:
   dependencies:
     indexof "0.0.1"
 
+vue-disqus@^2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/vue-disqus/-/vue-disqus-2.0.4.tgz#bee0ba3421202a0980e3cd81e357535d3816fa55"
+
 vue-hot-reload-api@^2.2.0:
   version "2.2.4"
   resolved "https://registry.yarnpkg.com/vue-hot-reload-api/-/vue-hot-reload-api-2.2.4.tgz#683bd1d026c0d3b3c937d5875679e9a87ec6cd8f"
