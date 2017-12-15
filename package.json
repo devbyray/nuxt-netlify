@@ -15,10 +15,12 @@
   "dependencies": {
     "@nuxtjs/pwa": "^2.0.3",
     "axios": "^0.17.1",
+    "entities": "^1.1.1",
     "glamor": "^2.20.40",
     "moment": "^2.19.2",
     "nuxt": "^1.0.0-rc11",
     "randomcolor": "^0.5.3",
+    "string-strip-html": "^1.1.0",
     "vue-disqus": "^2.0.4"
   },
   "devDependencies": {

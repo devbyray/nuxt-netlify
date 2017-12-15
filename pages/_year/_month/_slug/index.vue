@@ -1,7 +1,6 @@
 <template>
   <article class="mfd__post">
     <div class="mfd__post-title">
-      <strong>lkashdlkasd</strong>
       <h1 class="title" v-html="post.title.rendered"></h1>
     </div>
     <div class="mfd__post-image" v-if="post.better_featured_image !== undefined && post.acf.youtube_url === undefined">
@@ -31,6 +30,8 @@ import axios from 'axios'
 import moment from 'moment'
 import Sidebar from '~/components/Sidebar.vue'
 import VueDisqus from 'vue-disqus/VueDisqus.vue'
+import entities from 'entities'
+import stripHtml from 'string-strip-html'
 
 const getYoutubeEmbedUrl = (youtubeUrl) => {
   let yt = 'https://www.youtube.com/watch?v=hFi0hUnvr0s'
@@ -83,14 +84,14 @@ export default {
   head () {
     let post = this.post
     return {
-      title: unescape(post.title.rendered)
-      // meta: [
-      //   {
-      //     hid: post.meta.id,
-      //     name: post.meta.name,
-      //     content: post.meta.content
-      //   }
-      // ]
+      title: entities.decodeHTML(post.title.rendered),
+      meta: [
+        {
+          // hid: post.meta.id,
+          // name: post.meta.name,
+          content: stripHtml(entities.decodeHTML(post.excerpt.rendered))
+        }
+      ]
     }
   },
   watch: {
