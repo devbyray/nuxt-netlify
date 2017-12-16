@@ -3,24 +3,24 @@
     <div class="mfd__post-title">
       <h1 class="title" v-html="post.title.rendered"></h1>
     </div>
-    <div class="mfd__post-image" v-if="post.better_featured_image !== undefined && post.acf.youtube_url === undefined">
+    <div class="mfd__post-image" v-if="post.better_featured_image !== undefined">
       <img :src="post.better_featured_image.source_url" :alt="post.title.rendered">
     </div>
-    <div class="mfd__post-video" v-if="post.acf.youtube_url !== undefined">
+    <!-- <div class="mfd__post-video" v-if="post.acf.youtube_url !== undefined">
       <div class="embed-youtube">
         <iframe id="ytplayer" type="text/html" width="640" height="360" :src="getYoutubeEmbedUrl(post.acf.youtube_url)" frameborder="0"></iframe>
       </div>
-    </div>
+    </div> -->
     <div class="mfd__post-date">
       <strong>Published: </strong> <em :title="post.date">{{moment(post.date).fromNow()}}</em>
     </div>
     <div class="mfd__post-content">
       <div class="content" v-html="post.content.rendered"></div>
     </div>
-    <div class="mfd__post-comments">
+    <!-- <div class="mfd__post-comments">
       <h2>Comments</h2>
       <disqus shortname="rsschouwenaar" :identifier="post.id"></disqus>
-    </div>
+    </div> -->
   </article>
 </template>
 
@@ -99,6 +99,8 @@ export default {
       // disqus does not properly reload just based off the
       // disqusId computed property - we need to manually change it
       // when we know it should update
+      console.log('current: ', curr)
+      console.log('old: ', old)
       this.$refs.disqus.init()
     }
   }
@@ -110,52 +112,55 @@ export default {
 @supports (display: grid) {
   .mfd__post {
     display: grid;
-    grid-gap: 2em;
+    grid-gap: 1rem;
     grid-template-rows: 1fr;
-    grid-template-columns: repeat(12,1fr);
+    grid-template-columns: repeat(5,1fr);
   }
   .mfd__post-title {
     grid-row: 1;
-    grid-column: 2/12
+    grid-column: 1/6
   }
   .mfd__post-image,
   .mfd__post-video {
     grid-row: 2;
-    grid-column: 2/12
+    grid-column: 1/6
   }
   .mfd__post-date {
     grid-row: 3;
-    grid-column: 2/12
+    grid-column: 1/6
   }
   .mfd__post-content {
     grid-row: 4;
-    grid-column: 2/12
+    grid-column: 1/6
   }
   .mfd__post-comments {
     grid-row: 5;
-    grid-column: 2/12
+    grid-column: 1/6
   }
 
   @media screen
     and (min-width: 900px) {
       .mfd__post-title {
-        grid-column: 3/11;
         text-align: justify;
+        grid-row: 1;
+        grid-column: 2/5
+      }
+      .mfd__post-date {
+        grid-row: 2;
+        grid-column: 2/5
       }
       .mfd__post-image,
       .mfd__post-video {
-        grid-column: 2/12;
-      }
-      .mfd__post-date {
-        grid-column: 3/4
+        grid-column: 1/6;
+        grid-row: 3;
       }
       .mfd__post-content {
-        grid-row: 3;
-        grid-column: 5/11
+        grid-row: 4;
+        grid-column: 2/5
       }
       .mfd__post-comments {
-        grid-row: 4;
-        grid-column: 5/11
+        grid-row: 5;
+        grid-column: 2/5
       }
 
   }
@@ -164,6 +169,7 @@ export default {
   and (min-width: 900px) {
   .mfd__post-title .title {
     font-size: 4rem;
+    margin: 0;
   }
 }
 @media screen
@@ -172,6 +178,9 @@ export default {
     font-size: 4rem;
   }
 }
+.mfd__post {
+  margin-bottom: 1rem;
+}
 .mfd__post-title .title {
   font-size: 2rem;
 }
@@ -179,9 +188,13 @@ export default {
 .mfd__post-content iframe {
   max-width: 100%;
 }
+.mfd__post-image {
+  text-align: center
+}
 .mfd__post-content p,
 .mfd__post-content ol,
-.mfd__post-content ul {
+.mfd__post-content ul,
+.mfd__post-content pre {
   margin-bottom: 1.6rem;
 }
 .mfd__post-content code {
@@ -192,7 +205,13 @@ export default {
   font-weight: 800;
 }
 .mfd__post-content pre {
-    font-size: .8rem;
+  font-size: .8rem;
+  width: 100%;
+  padding: .2rem .5rem;
+  background: #ccc;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
 }
 
 </style>

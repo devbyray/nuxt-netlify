@@ -60,10 +60,8 @@ export default {
     min-height: 100vh;
     display: grid;
     grid-gap: 2em;
+    max-width: 1400px;
     grid-template-columns: repeat(12,1fr);
-    /* grid-template-areas:
-     "header header header"
-     "content content sidebar"; */
   }
 
   .mfd__header  {
@@ -78,22 +76,21 @@ export default {
   .mfd__header,
   .mfd__content,
   .mfd__sidebar {
-    grid-column: 2/12;
+    grid-column: 1/13;
   }
 
   @media screen
     and (min-width: 900px) {
     .mfd__header  {
       grid-row: 1;
-      grid-column: 3/11;
     }
     .mfd__content  {
       grid-row: 3;
-      grid-column: 3/9;
+      grid-column: 2/9;
     }
     .mfd__sidebar {
       grid-row: 3;
-      grid-column: 9/11
+      grid-column: 9/12
     }
   }
 
