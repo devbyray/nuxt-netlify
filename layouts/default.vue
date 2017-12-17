@@ -66,6 +66,8 @@ export default {
 
   .mfd__header  {
     grid-row: 1;
+    background: #000000;
+    color: #ffffff;
   }
   .mfd__content  {
     grid-row: 2;
